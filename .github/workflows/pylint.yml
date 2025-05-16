@@ -30,4 +30,3 @@ jobs:
         run: |
           shopt -s globstar
           pylint **/*.py
-          
