@@ -1,0 +1,53 @@
+[MASTER]
+ignore=venv, __pycache__, .git
+jobs=1
+load-plugins=
+extension-pkg-whitelist=
+init-hook='import sys; sys.path.append(".")'
+
+[MESSAGES CONTROL]
+# Disable common noisy warnings during development
+disable=
+    C0114,  # Missing module docstring
+    C0115,  # Missing class docstring
+    C0116,  # Missing function or method docstring
+    R0801,  # Duplicate code
+    W0707,  # Raise-missing-from
+    C0301,  # Line too long
+    E0401   # Import error (use cautiously; better to fix these)
+
+[REPORTS]
+output-format = colorized
+reports = no
+score = yes
+
+[FORMAT]
+max-line-length=100
+indent-string='    '
+
+[LOGGING]
+logging-format-style = old
+
+[TYPECHECK]
+ignore-mixin-members=yes
+ignored-modules=pytest,fastapi
+ignored-classes=TestCase
+
+[SIMILARITIES]
+min-similarity-lines=10
+
+[DESIGN]
+max-args=6
+max-locals=15
+max-returns=6
+max-branches=12
+max-statements=50
+max-parents=7
+max-attributes=10
+max-public-methods=20
+
+[VARIABLES]
+dummy-variables-rgx=(_+$|unused_|^_$)
+
+[IMPORTS]
+known-third-party=fastapi,pytest,requests
