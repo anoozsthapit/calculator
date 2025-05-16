@@ -28,5 +28,4 @@ jobs:
 
       - name: Run pylint
         run: |
-          shopt -s globstar
-          pylint **/*.py
+          find . -type f -name "*.py" -print0 | xargs -0 pylint
