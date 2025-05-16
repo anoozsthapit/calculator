@@ -28,7 +28,6 @@ def calculate(
             raise ValueError("Invalid operation")
     except ValueError as e:
         raise HTTPException(status_code=400, detail=str(e))
-    
     return {
         "operation": operation,
         "a": a,
